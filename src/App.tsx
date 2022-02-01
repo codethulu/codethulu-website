@@ -15,17 +15,21 @@ import './components/projectCard.css'
 
 
 function App() {
-  constructor(props) {
-    super(props);
-    this.state = { brand: "Ford" };
+  const [projects, setProjects] = useState(projectsList.filter((project: { tags: string | string[]; }) => project.tags.includes("favourites")));
+  const allProjects = () => {
+    setProjects(projectsList);
   }
+  const filterProjects = (e: string) => {
+    setProjects(projectsList.filter((project: { tags: string | string[]; }) => project.tags.includes(e)));
+  }
+
   return (
 
     <div className="App">
       <Header />
       <SideLinks />
       <About />
-      <ProjectShowcase projects={projectsList} />
+      <ProjectShowcase allProjects={allProjects} filterProjects={filterProjects} projects={projects} />
       <Contact />
 
     </div>
@@ -136,36 +140,29 @@ const ProjectCard = (props: ProjectCardProps) => {
   )
 }
 
-const ProjectShowcase = (props: { projects: any }) => {
-  const [projects, setProjects] = useState(props.projects.filter((project: { tags: string | string[]; }) => project.tags.includes("favourites")));
-  const allProjects = () => {
-    setProjects(props.projects);
-  }
-  const filterProjects = (e: string) => {
-    setProjects(props.projects.filter((project: { tags: string | string[]; }) => project.tags.includes(e)));
-  }
+const ProjectShowcase = (props: { allProjects: any; filterProjects: any; projects: any }) => {
   return (
     <div className='container'>
       <Element name="projects" className="element"></Element>
       <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
         <h1>Here are some things I have worked on.</h1>
       </ScrollAnimation>
-      <button className="tag fire" onClick={() => filterProjects("favourites")}>FAVOURITES</button>
-      <button className="tag snake" onClick={() => filterProjects("python")}>PYTHON</button>
-      <button className="tag orange" onClick={() => filterProjects("java")}>JAVA</button>
-      <button className="tag purple" onClick={() => filterProjects("haskell")}>HASKELL</button>
-      <button className="tag" onClick={() => filterProjects("web-dev")}>WEB-DEV</button>
-      <button className="tag" onClick={() => allProjects()}>ALL</button>
+      <button className="tag fire" onClick={() => props.filterProjects("favourites")}>FAVOURITES</button>
+      <button className="tag snake" onClick={() => props.filterProjects("python")}>PYTHON</button>
+      <button className="tag orange" onClick={() => props.filterProjects("java")}>JAVA</button>
+      <button className="tag purple" onClick={() => props.filterProjects("haskell")}>HASKELL</button>
+      <button className="tag" onClick={() => props.filterProjects("web-dev")}>WEB-DEV</button>
+      <button className="tag" onClick={() => props.allProjects()}>ALL</button>
       <div>
         <div className='inner-container'>
           <Masonry
             columns={{ xs: 1, sm: 1, md: 2, lg: 2, xl: 3 }}
-            spacing={3}
-            defaultHeight={450}
+            spacing={2}
+            defaultHeight={50}
             defaultColumns={3}
             defaultSpacing={2}
           >
-            {projects.map((e: { name: string; titleCard: boolean; description: string; tags: string[]; image: string; showcase: boolean; }) => {
+            {props.projects.map((e: { name: string; titleCard: boolean; description: string; tags: string[]; image: string; showcase: boolean; }) => {
               return (
                 <ProjectCard name={e.name} description={e.description} tags={e.tags} image={e.image} />
               );
