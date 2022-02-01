@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.css": "/static/css/main.6e5cfc89.css",
+    "main.js": "/static/js/main.ff77201e.js",
+    "static/js/787.7baaa7a4.chunk.js": "/static/js/787.7baaa7a4.chunk.js",
+    "static/media/ursinaelements.gif": "/static/media/ursinaelements.8f98a8af4adaf5bf1756.gif",
+    "static/media/syte.gif": "/static/media/syte.3d4312ead982dcbeae1c.gif",
+    "static/media/thechamber.gif": "/static/media/thechamber.032addab9ecfc922ff7d.gif",
+    "static/media/main-image.jpg": "/static/media/main-image.19aad32249ac1db5de98.jpg",
+    "static/media/cs140.jpg": "/static/media/cs140.d8ea76719b6aa8b13d81.jpg",
+    "static/media/cs126.jpg": "/static/media/cs126.486261028d814a0f5182.jpg",
+    "static/media/Judson-Regular.ttf": "/static/media/Judson-Regular.e528cdf241c7c3ab19e4.ttf",
+    "static/media/Judson-Italic.ttf": "/static/media/Judson-Italic.ebddcc29842d58b90e20.ttf",
+    "static/media/ncurses.png": "/static/media/ncurses.4e28abe17bd956d91ffe.png",
+    "static/media/profile-pic.jpg": "/static/media/profile-pic.f88be5b238f43158fad7.jpg",
+    "static/media/down-nav-button.png": "/static/media/down-nav-button.97be25ef1e6e67d6aa4c.png",
+    "static/media/warwick-labour-website.jpg": "/static/media/warwick-labour-website.8563b8f1657f5a649998.jpg",
+    "static/media/cs141.png": "/static/media/cs141.b2096f11ce44fde75def.png",
+    "static/media/title-chamber.jpg": "/static/media/title-chamber.ad1d67852c965e7baee8.jpg",
+    "static/media/logo.png": "/static/media/logo.ccc3713eeb21183c0968.png",
+    "static/media/404.jpg": "/static/media/404.e450d84899953442a8f1.jpg",
+    "static/media/essay.png": "/static/media/essay.2c05cf061be8cf3e1949.png",
+    "static/media/cs141-1.jpg": "/static/media/cs141-1.21440b189174604b9708.jpg",
+    "static/media/cs141-1-a.jpg": "/static/media/cs141-1-a.f85970fddeb608ebf31d.jpg",
+    "static/media/website2.jpg": "/static/media/website2.fcab687d27a65239c122.jpg",
+    "static/media/robot-maze.png": "/static/media/robot-maze.36d099bb9f9b91e6c963.png",
+    "static/media/old-website.jpg": "/static/media/old-website.72b978700ea7b9259ff4.jpg",
+    "static/media/go-tools.jpg": "/static/media/go-tools.f89721a5eb990803d365.jpg",
+    "index.html": "/index.html",
+    "main.6e5cfc89.css.map": "/static/css/main.6e5cfc89.css.map",
+    "main.ff77201e.js.map": "/static/js/main.ff77201e.js.map",
+    "787.7baaa7a4.chunk.js.map": "/static/js/787.7baaa7a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6e5cfc89.css",
+    "static/js/main.ff77201e.js"
+  ]
+}
