@@ -1,7 +1,8 @@
 {
-  "name": "codethulu-website-new",
+  "name": "codethulu-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://codethulu.dev",
   "dependencies": {
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
@@ -15,12 +16,15 @@
     "@types/react": "^17.0.38",
     "@types/react-dom": "^17.0.11",
     "@types/react-scroll": "^1.8.4",
+    "animate.css": "^4.1.1",
+    "parallax-controller": "^1.3.1",
     "react": "^17.0.2",
     "react-animate-on-scroll": "^2.1.5",
     "react-dom": "^17.0.2",
     "react-scripts": "5.0.0",
     "react-scroll": "^1.8.4",
     "react-scroll-parallax": "^3.0.2",
+    "styled-components": "^5.3.3",
     "typescript": "^4.5.5",
     "web-vitals": "^2.1.4"
   },
@@ -28,7 +32,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +56,7 @@
   },
   "devDependencies": {
     "@types/react-animate-on-scroll": "^2.1.5",
-    "@types/react-scroll": "^1.8.3"
+    "@types/react-scroll": "^1.8.3",
+    "gh-pages": "^3.2.3"
   }
 }

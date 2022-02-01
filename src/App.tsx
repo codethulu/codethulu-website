@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {
   Link,
   Element,
 } from "react-scroll";
 import ScrollAnimation from 'react-animate-on-scroll';
-import { ParallaxBanner } from 'react-scroll-parallax';
+import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
+import { Parallax } from 'react-scroll-parallax';
 import { Masonry } from '@mui/lab';
 import mainImage from './images/main-image.jpg';
 import codethuluLogo from './images/logo.png';
 import projectsList from './components/projectsList';
 import './components/projectCard.css'
+import "animate.css/animate.min.css";
 
 
 function App() {
@@ -28,6 +29,9 @@ function App() {
     <div className="App">
       <Header />
       <SideLinks />
+      <ParallaxProvider>
+        <IntroGraphic />
+      </ParallaxProvider>
       <About />
       <ProjectShowcase allProjects={allProjects} filterProjects={filterProjects} projects={projects} />
       <Contact />
@@ -82,13 +86,48 @@ const SideLinks = () => {
   );
 }
 
+const IntroGraphic = () => (
+  <div className='main-graphic'>
+    <ParallaxBanner
+      layers={[
+        {
+          expanded: false,
+          image: mainImage,
+          speed: 10,
+        },
+        {
+          expanded: false,
+          image: codethuluLogo,
+          speed: 20,
+        },
+      ]}
+      style={
+        {
+          height: "100%",
+        }
+      }
+    >
+      <div className='graphic-title-box'>
+        <h1 className='main-graphic-title'>CODETHULU</h1>
+        <h1 className='sub-graphic-title'>BRENDAN BELL IS A SOFTWARE DEVELOPER AND GRAPHIC DESIGNER.</h1>
+      </div>
+      <Link activeClass="active" to="about" spy={true} smooth={true} offset={-100} duration={750} >
+        <div className='down-button'></div>
+      </Link>
+
+    </ParallaxBanner>
+  </div>
+);
+
 const About = () => {
   return (
     <div className='container'>
       <Element name="about" className="element"></Element>
+      <div className='divider'></div>
       <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
         <h1>Hi, my name is Brendan.</h1>
       </ScrollAnimation>
+
       <div className='inner-container'>
         <img className='photo'></img>
         <div className='about-info'>
@@ -97,6 +136,7 @@ const About = () => {
             <p>Currently I am studying Computer Science at the University of Warwick, as well as continuing to undertake personal projects that utilise new technologies in order to develop my skillset further.</p>
           </ScrollAnimation>
         </div>
+
       </div>
     </div >
   );
@@ -107,26 +147,28 @@ interface ProjectCardProps {
 }
 const ProjectCard = (props: ProjectCardProps) => {
   return (
+
     <div className='project-card'>
+
 
       <div className={'image image-' + props.image}></div>
       <h1> {props.name} </h1>
       <p> {props.description}</p>
       {props.tags.map((e) => {
         let tagStyle = 'tag'
-        if (e == "java" || e == "javascript") {
+        if (e === "java" || e === "javascript") {
           tagStyle += ' orange'
-        } else if (e == "haskell") {
+        } else if (e === "haskell") {
           tagStyle += ' purple'
-        } else if (e == "c") {
+        } else if (e === "c") {
           tagStyle += ' green'
-        } else if (e == "postgresql") {
+        } else if (e === "postgresql") {
           tagStyle += ' cobalt'
-        } else if (e == "html" || e == "swift" || e == "favourites") {
+        } else if (e === "html" || e === "swift" || e === "favourites") {
           tagStyle += ' fire'
-        } else if (e == "css" || e == "typescript") {
+        } else if (e === "css" || e === "typescript") {
           tagStyle += ' ocean'
-        } else if (e == "python") {
+        } else if (e === "python") {
           tagStyle += ' snake'
         }
         return (
@@ -137,6 +179,7 @@ const ProjectCard = (props: ProjectCardProps) => {
     </div >
 
 
+
   )
 }
 
@@ -144,6 +187,7 @@ const ProjectShowcase = (props: { allProjects: any; filterProjects: any; project
   return (
     <div className='container'>
       <Element name="projects" className="element"></Element>
+      <div className='divider'></div>
       <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
         <h1>Here are some things I have worked on.</h1>
       </ScrollAnimation>
@@ -153,23 +197,25 @@ const ProjectShowcase = (props: { allProjects: any; filterProjects: any; project
       <button className="tag purple" onClick={() => props.filterProjects("haskell")}>HASKELL</button>
       <button className="tag" onClick={() => props.filterProjects("web-dev")}>WEB-DEV</button>
       <button className="tag" onClick={() => props.allProjects()}>ALL</button>
-      <div>
-        <div className='inner-container'>
-          <Masonry
-            columns={{ xs: 1, sm: 1, md: 2, lg: 2, xl: 3 }}
-            spacing={2}
-            defaultHeight={50}
-            defaultColumns={3}
-            defaultSpacing={2}
-          >
-            {props.projects.map((e: { name: string; titleCard: boolean; description: string; tags: string[]; image: string; showcase: boolean; }) => {
-              return (
-                <ProjectCard name={e.name} description={e.description} tags={e.tags} image={e.image} />
-              );
-            })}
-          </Masonry>
-        </div>
+      <div className='divider'></div>
+
+      <div className='inner-container h-auto'>
+        <Masonry
+          columns={{ xs: 1, sm: 1, md: 2, lg: 2, xl: 3 }}
+          spacing={2}
+          defaultHeight={50}
+          defaultColumns={3}
+          defaultSpacing={2}
+        >
+          {props.projects.map((e: { name: string; titleCard: boolean; description: string; tags: string[]; image: string; showcase: boolean; }) => {
+            return (
+              <ProjectCard name={e.name} description={e.description} tags={e.tags} image={e.image} />
+            );
+          })}
+        </Masonry>
       </div>
+
+
     </div >
   );
 }
@@ -178,10 +224,16 @@ const Contact = () => {
   return (
     <div className='container'>
       <Element name="contact" className="element"></Element>
+      <div className='divider'></div>
       <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
         <h1>Let's get in touch.</h1>
       </ScrollAnimation>
       <p>Interested in working with me or talking about any of my work? Please don't hesitate to get in contact.</p>
+      <a href="mailto: brendan@codethulu.dev"><div className='contact-button'>Say Hello</div></a>
+      <a href='https://github.com/codethulu' className='inline'><div className='contact-logo github' ></div></a>
+      <a href='https://twitter.com/Codethulu_' className='inline'><div className='contact-logo twitter'></div></a>
+      <a href='https://www.linkedin.com/in/brendan-bell-34b282202/' className='inline'><div className='contact-logo linkedin'></div></a>
+      <div className='divider'></div>
     </div >
   );
 }

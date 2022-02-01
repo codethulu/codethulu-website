@@ -11,6 +11,64 @@ body {
 
 }
 
+.navbar{
+  position: fixed;
+  z-index: 2;
+  /* background-image: linear-gradient(to top, rgba(0, 0, 0, 0.192), rgb(0, 0, 0)); */
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  text-align: center;
+  top:0;
+  transition-duration: 1s;
+}
+
+
+.nav-title{
+  cursor: pointer;
+    font-family:judson;
+    font-size: 8pt;
+    color: rgb(158, 158, 158);
+    width:15%;
+    transition-duration: 0.5s;
+    margin:5px;
+    padding-top: 8px;
+    padding-bottom: 5px;
+
+    padding-inline: 10px;
+
+}
+@media (min-width: 768px) { 
+  .nav-title{
+		font-size: 18pt;
+    margin:7px;
+    padding: 20px;
+	}
+}
+
+.nav-option{
+  display: inline;
+  cursor: pointer;
+}
+
+
+.nav-title:hover{
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+  text-decoration: line-through;
+}
+
+.nav-sticky{
+  position: fixed;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  width: 100%;
+  top:0;
+}
+
+
+
 
 .container{
     margin-top: 150px;
@@ -23,6 +81,9 @@ body {
     height: 60vh;
     width: 80%;
     text-align: center;
+}
+.h-auto{
+  height: auto;
 }
 .full-view{
   height: 100vh;
@@ -38,10 +99,11 @@ body {
     color: rgb(197, 197, 197);
     transition-duration: 0.5s;
 }
+
 .container p {
     
     text-align: left;
-    font-family: roboto-medium;
+    font-family:judson;
     padding-inline: 10%;
     font-size: 2vh;
     font-style: normal;
@@ -168,12 +230,13 @@ body {
 .line{
     position: absolute;
     height: 210px;
-    width: 3px;
+    width: 2px;
     background-color: rgb(197, 197, 197);
     margin: auto;
     bottom: 0;
     left: 43%;
 }
+
 .link-logo{
     width: 40px;
     height:40px;
@@ -204,6 +267,10 @@ body {
   background-color: black;
   width: 100%;
   text-align: center;
+  /* background-image: url(./images/main-image.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
 
 .graphic-title-box{
@@ -216,7 +283,7 @@ body {
 
 .main-graphic-title{
     display:inline-block;
-    font-family: cmu-italic;
+    font-family: judson-italic;
     font-size: 10vh;
     margin: auto;
     color: white;
@@ -230,7 +297,7 @@ body {
 .sub-graphic-title{
     display:inline-block;
     margin: auto;
-    font-family: roboto-medium;
+    font-family: judson;
     font-size: 2.5vh;
     color: white;
     text-align: center;
@@ -241,9 +308,9 @@ body {
   display: block;
   margin: auto;
   left: 50%;
-  top: 85%;
-  width: 6vh;
-  height: 6vh;
+  top: 90%;
+  width: 5vh;
+  height: 5vh;
   background-image: url('./images/down-nav-button.png');
   background-size: contain;
   background-repeat: no-repeat;
@@ -259,10 +326,61 @@ body {
 }
 
 .divider{
-  background-color: white;
-  width: 100%;
+  background-color: rgb(197, 197, 197);
+  width: 60%;
 
-  height: 5px;
+  height: 2px;
   margin: 0 auto;
+  margin-block: 20px;
 
+}
+
+.contact-button{
+    display: block;
+    width: 250px;
+    height: 50px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.664);
+    margin: auto;
+    text-align: center;
+    transition: all 0.5s ease;
+    text-decoration: none;
+    color: rgb(160, 160, 160);
+    text-align: center;
+    font-size: 25pt;
+    font-family:judson;
+    
+}
+.contact-button:hover{
+    color: white;
+    box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 1);
+    transform: translateY(-5px);
+
+    
+}
+
+
+.inline{
+    display: inline-block;
+    width: 50px;
+    height:50px;
+    margin: 10px;
+}
+.contact-logo{
+
+    width: 50px;
+    height:50px;
+    margin: 5px;
+    margin-bottom: 20px;
+    background-position: center;
+    background-size: contain;
+
+    transition: all 0.5s ease;
+}
+.contact-logo:hover{
+    filter: brightness(200%);
+    transform: translateY(-5px);
+}
+a{
+    text-decoration:none;
 }
