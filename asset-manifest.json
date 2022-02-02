@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.1909ad59.css",
+    "main.css": "/static/css/main.a4c72131.css",
     "main.js": "/static/js/main.f8fcc23f.js",
     "static/js/787.7baaa7a4.chunk.js": "/static/js/787.7baaa7a4.chunk.js",
     "static/media/ursinaelements.gif": "/static/media/ursinaelements.8f98a8af4adaf5bf1756.gif",
@@ -9,6 +9,7 @@
     "static/media/main-image.jpg": "/static/media/main-image.19aad32249ac1db5de98.jpg",
     "static/media/cs140.jpg": "/static/media/cs140.d8ea76719b6aa8b13d81.jpg",
     "static/media/cs126.jpg": "/static/media/cs126.486261028d814a0f5182.jpg",
+    "static/media/bg.jpg": "/static/media/bg.3fe95b3be8518de19adf.jpg",
     "static/media/Judson-Regular.ttf": "/static/media/Judson-Regular.e528cdf241c7c3ab19e4.ttf",
     "static/media/Judson-Italic.ttf": "/static/media/Judson-Italic.ebddcc29842d58b90e20.ttf",
     "static/media/ncurses.png": "/static/media/ncurses.4e28abe17bd956d91ffe.png",
@@ -27,12 +28,12 @@
     "static/media/old-website.jpg": "/static/media/old-website.72b978700ea7b9259ff4.jpg",
     "static/media/go-tools.jpg": "/static/media/go-tools.f89721a5eb990803d365.jpg",
     "index.html": "/index.html",
-    "main.1909ad59.css.map": "/static/css/main.1909ad59.css.map",
+    "main.a4c72131.css.map": "/static/css/main.a4c72131.css.map",
     "main.f8fcc23f.js.map": "/static/js/main.f8fcc23f.js.map",
     "787.7baaa7a4.chunk.js.map": "/static/js/787.7baaa7a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1909ad59.css",
+    "static/css/main.a4c72131.css",
     "static/js/main.f8fcc23f.js"
   ]
 }
