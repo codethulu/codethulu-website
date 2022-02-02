@@ -24,7 +24,7 @@ function App() {
     setProjects(projectsList.filter((project: { tags: string | string[]; }) => project.tags.includes(e)));
   }
   const filterProjectsTitle = (e: string) => {
-    setProjects(projectsList.filter((project: { name: string; }) => project.name.toUpperCase().includes(e.toUpperCase())));
+    setProjects(projectsList.filter((project: { name: string; description: string; }) => project.name.toUpperCase().includes(e.toUpperCase()) || project.description.toUpperCase().includes(e.toUpperCase())));
   }
 
   return (
