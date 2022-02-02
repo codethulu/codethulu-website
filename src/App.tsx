@@ -23,6 +23,9 @@ function App() {
   const filterProjects = (e: string) => {
     setProjects(projectsList.filter((project: { tags: string | string[]; }) => project.tags.includes(e)));
   }
+  const filterProjectsTitle = (e: string) => {
+    setProjects(projectsList.filter((project: { name: string; }) => project.name.toUpperCase().includes(e.toUpperCase())));
+  }
 
   return (
 
@@ -33,7 +36,7 @@ function App() {
         <IntroGraphic />
       </ParallaxProvider>
       <About />
-      <ProjectShowcase allProjects={allProjects} filterProjects={filterProjects} projects={projects} />
+      <ProjectShowcase allProjects={allProjects} filterProjects={filterProjects} filterProjectsTitle={filterProjectsTitle} projects={projects} />
       <Contact />
 
     </div>
@@ -88,6 +91,7 @@ const SideLinks = () => {
 
 const IntroGraphic = () => (
   <div className='main-graphic'>
+    <Element name="home" className="element"></Element>
     <ParallaxBanner
       layers={[
         {
@@ -183,7 +187,12 @@ const ProjectCard = (props: ProjectCardProps) => {
   )
 }
 
-const ProjectShowcase = (props: { allProjects: any; filterProjects: any; projects: any }) => {
+const ProjectShowcase = (props: { allProjects: any; filterProjects: any; filterProjectsTitle: any; projects: any }) => {
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const handleSearchChange = (e: { target: { value: React.SetStateAction<string>; }; }) => {
+    setSearchTerm(e.target.value)
+    props.filterProjectsTitle(searchTerm)
+  }
   return (
     <div className='container'>
       <Element name="projects" className="element"></Element>
@@ -191,12 +200,16 @@ const ProjectShowcase = (props: { allProjects: any; filterProjects: any; project
       <ScrollAnimation animateIn="animate__fadeIn" animateOnce={true}>
         <h1>Here are some things I have worked on.</h1>
       </ScrollAnimation>
+
+
       <button className="tag fire" onClick={() => props.filterProjects("favourites")}>FAVOURITES</button>
       <button className="tag snake" onClick={() => props.filterProjects("python")}>PYTHON</button>
       <button className="tag orange" onClick={() => props.filterProjects("java")}>JAVA</button>
       <button className="tag purple" onClick={() => props.filterProjects("haskell")}>HASKELL</button>
       <button className="tag" onClick={() => props.filterProjects("web-dev")}>WEB-DEV</button>
       <button className="tag" onClick={() => props.allProjects()}>ALL</button>
+
+      <input type="text" className='searchBar' placeholder='Search' value={searchTerm} onChange={handleSearchChange}></input>
       <div className='divider'></div>
 
       <div className='inner-container h-auto'>
