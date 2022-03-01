@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a4c72131.css",
-    "main.js": "/static/js/main.dc33310b.js",
+    "main.css": "/static/css/main.5d5ae32b.css",
+    "main.js": "/static/js/main.6c8191b9.js",
     "static/js/787.7baaa7a4.chunk.js": "/static/js/787.7baaa7a4.chunk.js",
     "static/media/ursinaelements.gif": "/static/media/ursinaelements.8f98a8af4adaf5bf1756.gif",
     "static/media/syte.gif": "/static/media/syte.3d4312ead982dcbeae1c.gif",
@@ -22,18 +22,20 @@
     "static/media/404.jpg": "/static/media/404.e450d84899953442a8f1.jpg",
     "static/media/essay.png": "/static/media/essay.2c05cf061be8cf3e1949.png",
     "static/media/cs141-1.jpg": "/static/media/cs141-1.21440b189174604b9708.jpg",
+    "static/media/parser.jpg": "/static/media/parser.264e5f4010c73c74c868.jpg",
+    "static/media/mentor-connect.jpg": "/static/media/mentor-connect.fe145195b47c536b0b51.jpg",
     "static/media/cs141-1-a.jpg": "/static/media/cs141-1-a.f85970fddeb608ebf31d.jpg",
     "static/media/website2.jpg": "/static/media/website2.fcab687d27a65239c122.jpg",
     "static/media/robot-maze.png": "/static/media/robot-maze.36d099bb9f9b91e6c963.png",
     "static/media/old-website.jpg": "/static/media/old-website.72b978700ea7b9259ff4.jpg",
     "static/media/go-tools.jpg": "/static/media/go-tools.f89721a5eb990803d365.jpg",
     "index.html": "/index.html",
-    "main.a4c72131.css.map": "/static/css/main.a4c72131.css.map",
-    "main.dc33310b.js.map": "/static/js/main.dc33310b.js.map",
+    "main.5d5ae32b.css.map": "/static/css/main.5d5ae32b.css.map",
+    "main.6c8191b9.js.map": "/static/js/main.6c8191b9.js.map",
     "787.7baaa7a4.chunk.js.map": "/static/js/787.7baaa7a4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a4c72131.css",
-    "static/js/main.dc33310b.js"
+    "static/css/main.5d5ae32b.css",
+    "static/js/main.6c8191b9.js"
   ]
 }
