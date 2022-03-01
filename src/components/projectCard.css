@@ -1,0 +1,182 @@
+.project-card{
+    display: inline-block;
+    background-color: rgb(19, 19, 19);
+    border-radius: 10px;
+    height: auto;
+    width: 100%;
+    
+    vertical-align: top;
+    transition: all 0.5s ease-in-out;
+    opacity: 0.70;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 3px solid rgb(71, 71, 71);
+    border-style: none solid solid solid; 
+}
+
+
+.project-card:hover{
+    opacity: 1.00;
+    transform: translateY(-10px);
+}
+
+.project-card h1{
+    color: white;
+    font-size: 14pt;
+    padding-inline: 0px;
+    margin: 20px 20px;
+}
+.project-card p{
+    font-size: 10pt;
+    padding-inline: 0px;
+    margin: 10px 20px;
+}
+
+
+
+
+.tag{
+    color: white;
+    font-family: roboto-medium;
+    display: inline-block;
+    background-color: rgb(92, 92, 92);
+    border-radius: 20px;
+    padding: 5px;
+    padding-inline: 10px;
+    text-transform: uppercase;
+    font-size: 8pt;
+    margin-inline: 2px;
+    margin-bottom: 6px;
+    transition-duration: 0.2s;
+    border: none;
+
+}
+.tag:hover{
+    transform: scale(1.1);
+
+}
+@media (min-width: 768px) { 
+    .project-card{
+        width: 50%;
+    }
+    .tag{
+        font-size: 11pt;
+
+    }
+    .project-card p{
+        font-size: 11pt;
+    }
+}
+@media (min-width: 1200px) { 
+    .project-card{
+        width: 25%;
+        margin: 20px;
+    }
+    .project-card h1{
+        font-size: 16pt;
+    }
+}
+
+
+.image{
+    background-color: rgb(87, 87, 87);
+    width: 100%;
+    height: 200px;
+    border-radius: 10px 10px 0px 0px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/404.jpg);
+
+    border: 3px solid rgb(71,71,71);
+    border-style: solid none none none; 
+
+}
+.title{
+    background-color: red;
+    width: 60%;
+    height: 100px;
+    margin: auto;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/404.jpg);
+}
+
+.orange{
+    background-color: rgb(218, 123, 0);
+}
+.fire{
+    background-color: rgb(218, 69, 0);
+}
+.ocean{
+    background-color: rgb(34, 145, 209);
+}
+.purple{
+    background-color: rgb(74, 34, 126);
+}
+.green{
+    background-color: rgb(24, 131, 104);
+}
+.cobalt{
+    background-color: rgb(59, 72, 134);
+}
+.snake{
+    background-color: rgb(142, 165, 40);
+}
+.image-robot-maze{
+    background-image: url(../images/projects/robot-maze.png);
+}
+.image-security-linux{
+    background-image: url(../images/projects/cs140.jpg);
+}
+.image-essay{
+    background-image: url(../images/projects/essay.png);
+}
+.image-waffles{
+    background-image: url(../images/projects/cs126.jpg);
+}
+.image-ncurses{
+    background-image: url(../images/projects/ncurses.png);
+}
+.image-old-website{
+    background-image: url(../images/projects/old-website.jpg);
+}
+.image-ldc{
+    background-image: url(../images/projects/cs141-1.jpg);
+}
+.image-scratch-clone{
+    background-image: url(../images/projects/cs141.png);
+}
+.image-sytes{
+    background-image: url(../images/projects/syte.gif);
+}
+.image-chamber{
+    background-image: url(../images/projects/thechamber.gif);
+}
+.image-ursina-elements{
+    background-image: url(../images/projects/ursinaelements.gif);
+}
+.image-warwick-labour-website{
+    background-image: url(../images/projects/warwick-labour-website.jpg);
+}
+.image-go-tools{
+    background-image: url(../images/projects/go-tools.jpg);
+}
+.title-chamber{
+    background-image: url(../images/projects/title-chamber.jpg);
+}
+.image-hurdle{
+    background-image: url(../images/projects/cs141-1-a.jpg);
+}
+.image-website2{
+    background-image: url(../images/projects/website2.jpg);
+}
+.image-parser{
+    background-image: url(../images/projects/parser.jpg);
+}
+.image-mentor-connect{
+    background-image: url(../images/projects/mentor-connect.jpg);
+}
